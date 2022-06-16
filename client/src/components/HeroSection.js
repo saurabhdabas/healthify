@@ -10,7 +10,8 @@ const HeroBanner = () => (
     kickstart your journey towards an all new you.
     </Typography>
     <Typography fontSize="22px" fontFamily="'DM Sans', sans-serif" lineHeight="35px">
-    With the right Exercises, you can reach your fitness goals faster, explore all exercises
+    Discover exercises to use in your routines
+    
     </Typography>
     <a href="#exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '40px',fontFamily:"'DM Sans', sans-serif" }}>Explore Exercises</a>
     </Grid>
