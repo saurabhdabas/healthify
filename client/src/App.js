@@ -1,5 +1,6 @@
-import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import SearchExercises from './components/SearchExercises';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navbar/>
       <HeroSection/>
+      <SearchExercises/>
     </div>
   );
 }
