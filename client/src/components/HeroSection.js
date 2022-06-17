@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 
 const HeroBanner = () => (
-  <Box display="flex" sx={{ mt:'40px', ml:'50px'}} position="relative" p="20px">
+  <Box display="flex" sx={{ mt:'90px', ml:'50px'}} position="relative" p="20px">
     <Grid container display="flex" direction='column' justifyContent='space-between'>
     <Typography color="#FF2625" fontWeight="600" fontSize="56px" fontFamily="'Pacifico', cursive">Healthify</Typography>
     <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="23px" mt="30px" fontFamily="'DM Sans', sans-serif">
