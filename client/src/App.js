@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import SearchExercises from './components/SearchExercises';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -22,6 +23,7 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <SearchExercises response={response}/>
+      <Footer/>
     </div>
   );
 }
