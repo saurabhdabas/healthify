@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
     },
     url: 'https://youtube-search-and-download.p.rapidapi.com/video/related',
     headers: {
-      'X-RapidAPI-Key': '4f680bc0b3mshff4a36ea4ea0394p1cf98bjsncc28cd244f9c',
+      'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
       'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
     }
   };
