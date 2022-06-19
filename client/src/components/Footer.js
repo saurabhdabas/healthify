@@ -11,8 +11,8 @@ const Footer = () => (
     marginRight: '40px'}}/>
     <Stack direction='row' gap="10px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="40px" >
       <Typography variant="h5" sx={{ fontSize:'18px'}} mt="41px" textAlign="start" pb="40px" fontFamily="'DM Sans', sans-serif">Follow me</Typography>
-      <img src="./linkedin.png" alt="logo" style={{ width: '28px', height: '24px' }} />
-      <img src="./github.png" alt="logo" style={{ width: '28px', height: '28px' }} />
+      <img src="./linkedin.png" alt="logo" style={{ width: '28px', height: '24px', cursor:'pointer' }} />
+      <img src="./github.png" alt="logo" style={{ width: '28px', height: '28px', cursor:'pointer' }} />
       <Typography variant="h5" sx={{ fontSize:'18px'}} mt="41px" ml='450px' textAlign="center" pb="40px" fontFamily="'DM Sans', sans-serif">Made with ❤️ by Saurabh Dabas</Typography>
     </Stack>
   </Box>
