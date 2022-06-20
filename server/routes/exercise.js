@@ -3,9 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 /* GET exercises/:id page. */
+
 router.get('/:id', function(req, res, next) {
   const id = req.params.id;
-  const options = {
+
+  const exerciseOptions = {
     method: 'GET',
     url:`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`,
     headers: {
@@ -13,8 +15,7 @@ router.get('/:id', function(req, res, next) {
       'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
     },
   };
-  axios.request(options).then(function (response) {
-    console.log("response:",response.data)
+  axios.request(exerciseOptions).then(function (response) {
     res.json(response.data)
   }).catch(function (error) {
     console.error(error);

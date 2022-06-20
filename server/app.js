@@ -5,7 +5,6 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const indexRouter = require('./routes/index');
-const videosRouter = require('./routes/videos');
 const exercisesRouter = require('./routes/exercises');
 const exerciseRouter  = require('./routes/exercise');
 
@@ -19,7 +18,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/videos', videosRouter);
 app.use('/exercises', exercisesRouter);
 app.use('/exercises/exercise', exerciseRouter);
 
