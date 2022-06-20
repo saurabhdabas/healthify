@@ -112,7 +112,7 @@ const Exercise = () => {
                 {item.name}
               </Typography>
               <Typography sx={{mt:'10px',width:'300px'}} fontFamily="'DM Sans', sans-serif" fontSize="20px" color="#000" textAlign="left">
-                Created By: {item.creator ? item.creator.name : "Saurabh"}
+                Created By: {item.creator ? item.creator.name : "Arkanav"}
               </Typography>
             </Box>
           </a>
