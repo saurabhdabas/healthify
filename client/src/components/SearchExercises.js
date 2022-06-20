@@ -4,7 +4,7 @@ import ResultCard from './SearchResult';
 import {searchFilter} from '../utils/searchFilter';
 
 const SearchExercises = ({response}) => {
-
+  console.log("Exercises:",response)
   const [search, setSearch] = useState('');
 
   const [results, setSearchResults] = useState([]);
@@ -39,7 +39,7 @@ const SearchExercises = ({response}) => {
 
       <Grid container display='flex' justifyContent='space-between' sx={{columnGap:'100px'}}>
         <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
-          <Button name="back" onClick= {handleRequest} sx={{color:"#000"}}>
+          <Button name="back" onClick= {handleRequest} sx={{color:"#000", mb:"20px"}}>
             <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
               <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Back</Typography>
               <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
@@ -49,7 +49,7 @@ const SearchExercises = ({response}) => {
           </Button>
         </Link>
         <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
-        <Button name="chest" onClick= {handleRequest} sx={{color:"#000"}}>
+        <Button name="chest" onClick= {handleRequest} sx={{color:"#000", mb:"20px"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Chest</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
@@ -59,7 +59,7 @@ const SearchExercises = ({response}) => {
         </Button>
         </Link>
         <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
-        <Button name="lower arms" onClick= {handleRequest} sx={{color:"#000"}}>
+        <Button name="lower arms" onClick= {handleRequest} sx={{color:"#000", mb:"20px"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Lower arms</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
@@ -69,7 +69,7 @@ const SearchExercises = ({response}) => {
         </Button>
         </Link>
         <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
-        <Button name="lower legs" onClick= {handleRequest} sx={{color:"#000"}}>
+        <Button name="lower legs" onClick= {handleRequest} sx={{color:"#000", mb:"20px"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Lower legs</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>

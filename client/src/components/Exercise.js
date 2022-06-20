@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Box, Stack, Typography, Button } from '@mui/material';
 
 
-
 const Exercise = () => {
   const { id } = useParams();
   const [exerciseInfo, setExerciseInfo] = useState({});
@@ -12,7 +11,7 @@ const Exercise = () => {
   useEffect(() => {
     axios.get(`http://localhost:8080/exercises/exercise/${id}`) 
     .then((res) => {
-      console.log("Exercises:",res.data);
+      console.log("Exercise:",res.data);
       setExerciseInfo((prev)=>({ ...prev,
         bodyPart: res.data.bodyPart,
         equipment: res.data.equipment,
@@ -62,6 +61,7 @@ const Exercise = () => {
 
   return (
     <>
+      
       <Box sx={{ backgroundColor:'#000'}}>
         <Stack gap="60px" sx={{flexDirection: 'row', pt:"56px", pl: '20px',ml:'30px',mr:'30px', pb:'100px',alignItems: 'center' }}>
         <Box sx={{paddingTop:"145px"}}>
@@ -119,7 +119,7 @@ const Exercise = () => {
         ))}
       </Stack>
     </Box>
-      
+    
     </>
   )
 }
