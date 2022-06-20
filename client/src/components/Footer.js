@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Stack, Typography } from '@mui/material';
 
 const Footer = () => (
@@ -11,8 +12,12 @@ const Footer = () => (
     marginRight: '40px'}}/>
     <Stack direction='row' gap="10px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="40px" >
       <Typography variant="h5" sx={{ fontSize:'18px'}} mt="41px" textAlign="start" pb="40px" fontFamily="'DM Sans', sans-serif">Follow me</Typography>
-      <img src="./linkedin.png" alt="logo" style={{ width: '28px', height: '24px', cursor:'pointer' }} />
-      <img src="./github.png" alt="logo" style={{ width: '28px', height: '28px', cursor:'pointer' }} />
+      <a href="https://www.linkedin.com/in/saurabh-dabas-a3617b15a/" style={{textDecoration: 'none'}}>
+        <img src="./linkedin.png" alt="logo" style={{ width: '28px', height: '24px', cursor:'pointer' }} />
+      </a>
+      <a href="https://github.com/saurabhdabas/" style={{textDecoration: 'none'}}>
+        <img src="./github.png" alt="logo" style={{ width: '28px', height: '28px', cursor:'pointer' }} />
+      </a>
       <Typography variant="h5" sx={{ fontSize:'18px'}} mt="41px" ml='450px' textAlign="center" pb="40px" fontFamily="'DM Sans', sans-serif">Made with ❤️ by Saurabh Dabas</Typography>
     </Stack>
   </Box>
