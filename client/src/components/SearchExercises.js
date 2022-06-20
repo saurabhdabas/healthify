@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Box, Button, Stack, TextField, Typography, Grid } from '@mui/material';
+import { Box, Button, Stack, TextField, Typography, Grid, Link} from '@mui/material';
 import ResultCard from './SearchResult';
 import {searchFilter} from '../utils/searchFilter';
 
@@ -12,7 +12,10 @@ const SearchExercises = ({response}) => {
   const handleSearch = () => {
     setSearchResults(searchFilter(response,search).splice(0,18))
   }
-  console.log("Results:",results);
+  const handleRequest = (event) => {
+    setSearchResults(searchFilter(response,event.currentTarget.name).splice(0,18))
+  }
+  console.log("exercises:",results);
   return (
     <>
     <Stack alignItems="center" mt="37px"  justifyContent="center" p="20px"  sx={{backgroundColor:"#F3F3F3"}}>
@@ -35,54 +38,86 @@ const SearchExercises = ({response}) => {
       <Box sx={{ position: 'relative', width: '1170px', p: '20px' }}>
 
       <Grid container display='flex' justifyContent='space-between' sx={{columnGap:'100px'}}>
-        <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
-          <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Back</Typography>
-          <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
-            <img src="../back.jpeg" alt="back" width="152px" height="152px"/>
-          </Box>
-        </Stack>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+          <Button name="back" onClick= {handleRequest} sx={{color:"#000"}}>
+            <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
+              <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Back</Typography>
+              <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
+                <img src="../back.jpeg" alt="back" width="152px" height="152px"/>
+              </Box>
+            </Stack>
+          </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="chest" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Chest</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../chest.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="lower arms" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Lower arms</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../lowerarms.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="lower legs" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer'}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Lower legs</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../lowerlegs.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="neck" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack  alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer', mt:'20px', mb:"20px"}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px'}} textAlign="center" fontFamily="'DM Sans', sans-serif">Neck</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../neck.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="shoulders" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer', mt:'20px', mb:"20px"}}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px' }} textAlign="center" fontFamily="'DM Sans', sans-serif">Shoulders</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../shoulders.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="upper arms" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer', mt:'20px', mb:"20px" }}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px'}} textAlign="center" fontFamily="'DM Sans', sans-serif">Upper arms</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../upperarms.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
+        <Link className="clickToSearch" to={`/exercises/exercise`} style={{textDecoration:"none"}}>
+        <Button name="upper legs" onClick= {handleRequest} sx={{color:"#000"}}>
         <Stack alignItems='center' direction='column' spacing='1px' sx={{cursor:'pointer', mt:'20px', mb:"20px" }}>
           <Typography fontWeight={700} sx={{ fontSize: '16px', mb:'5px'}} textAlign="center" fontFamily="'DM Sans', sans-serif">Upper legs</Typography>
           <Box sx={{border:'2px solid black', borderRadius:"4px",width:"152px" ,height:"152px"}}>
             <img src="../upperlegs.jpeg" alt="back" width="152px" height="152px"/>
           </Box>
         </Stack>
+        </Button>
+        </Link>
       </Grid>
       </Box>
     </Stack>
