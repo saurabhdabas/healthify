@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Grid, Typography } from '@mui/material';
 
 const HeroBanner = () => (
@@ -11,9 +12,12 @@ const HeroBanner = () => (
     </Typography>
     <Typography fontSize="22px" fontFamily="'DM Sans', sans-serif" lineHeight="35px">
     Discover exercises to use in your routines
-    
     </Typography>
-    <a href="#exercises" style={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '40px',fontFamily:"'DM Sans', sans-serif" }}>Explore Exercises</a>
+    <Link to="/exercises" style={{textDecoration: 'none'}}>
+      <Typography sx={{ marginTop: '45px', textDecoration: 'none', width: '200px', textAlign: 'center', background: '#FF2625', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '40px',fontFamily:"'DM Sans', sans-serif" }}>
+      Explore Exercises
+      </Typography>
+    </Link>
     </Grid>
     <Grid>
     <img src="../herobanner.png" alt="hero-banner" className="hero-banner-img" height="700px"/>
