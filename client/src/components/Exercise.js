@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Box, Stack, Typography, Button } from '@mui/material';
-
+import Spinner from './Spinner';
 
 const Exercise = () => {
   const { id } = useParams();
@@ -58,7 +58,6 @@ const Exercise = () => {
     },
   ];
  
-
   return (
     <>
       
@@ -94,7 +93,7 @@ const Exercise = () => {
         Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{exerciseInfo.name}</span> exercise videos
       </Typography>
       <Stack display='flex' sx={{ flexDirection: { lg: 'row' }, gap: { lg: '50px', xs: '0px' },ml:'10px',mr:'10px'}} justifyContent="space-between" flexWrap="wrap" alignItems="center">
-        {exerciseVideos?.slice(0, 8)?.map((item, index) => (
+        {!exerciseVideos.length ? <Spinner/> :exerciseVideos?.slice(0, 8)?.map((item, index) => (
            
           <a
             key={index}
