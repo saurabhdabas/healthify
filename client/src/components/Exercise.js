@@ -31,7 +31,7 @@ const Exercise = () => {
       url: 'https://bing-video-search1.p.rapidapi.com/videos/search',
       params: {q: `${exerciseInfo.name} exercise`},
       headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
+        'X-RapidAPI-Key': 'dcbde3c064msh331872c8b653255p19625bjsn3814756331e3',
         'X-RapidAPI-Host': 'bing-video-search1.p.rapidapi.com'
       }
     };
