@@ -13,7 +13,8 @@ const SearchExercises = ({response}) => {
     setSearchResults(searchFilter(response,search).splice(0,18))
   }
   const handleRequest = (event) => {
-    setSearchResults(searchFilter(response,event.currentTarget.name).splice(0,18))
+    setSearch(event.currentTarget.name);
+    setSearchResults(searchFilter(response,event.currentTarget.name).splice(0,18));
   }
   console.log("exercises:",results);
   return (
@@ -123,8 +124,8 @@ const SearchExercises = ({response}) => {
     </Stack>
     {results.length ?     <Stack alignItems="center" justifyContent="center" p="20px"  sx={{backgroundColor:"#000"}}>
       <Box sx={{ position: 'relative', width: '1170px', p: '20px'}}>
-      <Typography variant="h4" fontWeight="bold" fontFamily="'DM Sans', sans-serif" sx={{ fontSize:'44px'}} mb="46px" color="#FFF">Showing Results</Typography>
-      <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center" maxHeight="900px" overflow="scroll" scrollbarcolor='#DC3545'>
+      <Typography variant="h4" fontWeight="bold" fontFamily="'DM Sans', sans-serif" sx={{ fontSize:'44px'}} mb="46px" color="#FFF">Explore all <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{search}</span> exercises</Typography>
+      <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="space-between" maxHeight="900px" overflow="scroll" scrollbarcolor='#DC3545'>
       {results.map((result)=>{
             return <ResultCard key={result.id} result={result}/>
           })}
