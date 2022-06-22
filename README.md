@@ -16,10 +16,12 @@ This is a Front end react based application for bodybuilding.
   - User can click exercise of interest to see related exercises videos from youtube.
 
 ## Project In Action
-  - User can search Exercises
+- User can search Exercises
+
 ![""](https://github.com/saurabhdabas/healthify--Built-in-React-MUI/blob/master/docs/healthify-1.gif?raw=true)
 
-  - User can checkout Youtube videos
+- User can checkout Youtube videos
+
 ![""](https://github.com/saurabhdabas/healthify--Built-in-React-MUI/blob/master/docs/healthify-2.gif?raw=true)
 
 ## Getting Started 
